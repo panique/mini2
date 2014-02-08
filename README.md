@@ -151,8 +151,5 @@ I think it's always a good idea to fill boring nerd-code stuff with quality cult
 
 ## Statistics (by BitDeli)
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/panique/php-mvc/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
-
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/panique/php-mvc-advanced/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
