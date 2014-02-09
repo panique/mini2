@@ -3,7 +3,13 @@
 *Note: This is the same like panique/php-mvc, but with additional features.*
 *This repo is in development, more to come...*
 
-*New in the advanced version: Twig*
+### New in the advanced version:
+
+1. Twig
+2. SASS-compiler in PHP ! You'll find the compiler in application/tools/scss-compiler.php. This tool will compile
+   all .scss files in public/scss to same-named .css files in public/css.
+   See https://github.com/panique/php-sass-watcher for more info how this works.
+   The SASS compiling is optional, you can delete the scss folder and just use classic .css, too.
 
 An extremely simple and easy to understand MVC skeleton application, reduced to the max.
 Everything is **as simple as possible**, as **manually as possible** and as readable as possible.
