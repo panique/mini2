@@ -86,6 +86,7 @@ know what you are doing.
 ## A quickstart tutorial
 
 You can also find these tutorial pictures in the *_tutorial* folder.
+**Note:** These files are not up-to-date, as Twig and SASS support are not mentioned here.
 
 ![php-mvc introduction tutorial - page 1](_tutorial/tutorial-part-01.png)
 ![php-mvc introduction tutorial - page 2](_tutorial/tutorial-part-02.png)
