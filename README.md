@@ -1,6 +1,6 @@
 # PHP-MVC-ADVANCED
 
-*Note: This is the same like panique/php-mvc, but with additional features.*
+*Note: This is the same like [panique/php-mvc](https://github.com/panique/php-mvc), but with additional features.*
 *This repo is in development, more to come...*
 
 ### New in the advanced version:
