@@ -12,6 +12,9 @@ body {
 .container table {
   font-size: 13px;
 }
+.container h2 {
+  color: blue;
+}
 .container .where-are-we-box {
   position: relative;
   left: -20px;
