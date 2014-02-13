@@ -22,5 +22,9 @@ require 'application/config/config.php';
 require 'application/libs/application.php';
 require 'application/libs/controller.php';
 
+// run the scss compiler every you the application is hit (in development)
+// TODO: build a switch for development/production
+SassCompiler::run("public/scss/", "public/css/");
+
 // start the application
 $app = new Application();

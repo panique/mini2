@@ -18,7 +18,9 @@
     },
     "require": {
         "php": ">=5.3.0",
-        "twig/twig": "1.*",
-        "leafo/scssphp": "0.0.9"
+        "twig/twig": "1.*"
+    },
+    "require-dev": {
+        "panique/laravel-sass": "dev-master"
     }
 }
