@@ -37,19 +37,29 @@ especially for the not-so-advanced coder.
 
 ## Installation
 
-First, copy this repo into a public accessible folder on your server.
+1. First, install Composer ([How to install Composer on Ubuntu, Debian or Windows 7/8](http://www.dev-metal.com/install-update-composer-windows-7-ubuntu-debian-centos/)).
+That's some kind of PHP standard now and there's no reason to work without Composer. If you think "I don't need/want
+Composer" then you are doing something seriously wrong!
+
+2. Copy this repo into a public accessible folder on your server.
 Common techniques are a) downloading and extracting the .zip / .tgz by hand, b) cloning the repo with git (into var/www)
 
 ```
 git clone https://github.com/panique/php-mvc-advanced.git /var/www
 ```
 
-1. Install mod_rewrite, for example by following this guideline:
+or c) getting the repo via Composer (here we copy into var/www)
+
+```
+composer create-project panique/php-mvc-advanced /var/www dev-master
+```
+
+3. Install mod_rewrite, for example by following this guideline:
 [How to install mod_rewrite in Ubuntu](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-12-04-lts/)
 
-2. Run the SQL statements in the *application/_install* folder.
+4. Run the SQL statements in the *application/_install* folder.
 
-3. Change the .htaccess file from
+5. Change the .htaccess file from
 ```
 RewriteBase /php-mvc-advanced/
 ```
@@ -63,14 +73,14 @@ If you have put the project into a sub-folder, then put the name of the sub-fold
 RewriteBase /sub-folder/
 ```
 
-4. Edit the *application/config/config.php*, change this line
+6. Edit the *application/config/config.php*, change this line
 ```php
 define('URL', 'http://127.0.0.1/php-mvc-advanced/');
 ```
 to where your project is. Real domain, IP or 127.0.0.1 when developing locally. Make sure you put the sub-folder
 in here (when installing in a sub-folder) too, also don't forget the trailing slash !
 
-5. Edit the *application/config/config.php*, change these lines
+7. Edit the *application/config/config.php*, change these lines
 ```php
 define('DB_TYPE', 'mysql');
 define('DB_HOST', '127.0.0.1');
@@ -81,14 +91,13 @@ define('DB_PASS', 'mysql');
 to your database credentials. If you don't have an empty database, create one. Only change the type `mysql` if you
 know what you are doing.
 
-6. Install Composer ([How to install Composer on Ubuntu, Debian or Windows 7/8](http://www.dev-metal.com/install-update-composer-windows-7-ubuntu-debian-centos/))
-
-7. Run `composer install` on the command line while being in the root of your project.
+8. Run `composer install` on the command line while being in the root of your project.
 
 ## A quickstart tutorial
 
 You can also find these tutorial pictures in the *_tutorial* folder.
-**Note:** These files are not up-to-date, as Twig and SASS support are not mentioned here.
+**Note:** **These files are not up-to-date, as Twig and SASS support are not mentioned here. I'll update the tutorial
+when there's time.**
 
 ![php-mvc introduction tutorial - page 1](_tutorial/tutorial-part-01.png)
 ![php-mvc introduction tutorial - page 2](_tutorial/tutorial-part-02.png)
