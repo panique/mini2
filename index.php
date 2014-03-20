@@ -26,10 +26,12 @@ require 'application/libs/controller.php';
 // TODO: build a switch for development/production
 SassCompiler::run("public/scss/", "public/css/");
 
-// make application error look better
+// call error method from additional class
+// this make pretty error reporting in your application 
 Additional::error();
 
-// build application access log
+// call log method from additional class
+// build user access log for yout application 
 Additional::log();
 
 // start the application

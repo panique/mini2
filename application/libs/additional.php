@@ -7,7 +7,7 @@ use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 
 /**
- * This is the "additional class". For make pretty error and logging application access.
+ * This is the "additional class". For make pretty error with whoops and logging application access with monolog.
  */
 class Additional
 {
@@ -21,35 +21,28 @@ class Additional
      */
     private static $instance = null;
 
-    /**
-     * Initialize whoops
-     * @return instance register
-     */
     public static function error()
     {
-        // initialize
+        // load whoops and register the pretty handler
+        // @see https://github.com/filp/whoops/
         self::$instance = new Run();
         self::$message  = new PrettyPageHandler();
-
-        // set page title
         self::$message->setPageTitle('Whoops! There was a problem.');
-        // set editor
         self::$message->setEditor('sublime');
         
-        // check if ajax request push with JsonResponseHandler
+        // check if AJAX requests, returns information on them as a JSON string
         if ( isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest' ) {
             self::$instance->pushHandler(new JsonResponseHandler());
         } else {
             self::$instance->pushHandler(self::$message);
         }
 
-        // register whoops
         return self::$instance->register();
     }
 
     public static function log()
     {
-        // make log access message : ap address, time access, referrer, query string, request url and user agent
+        // define log access message, such as : ip address, time access, referrer, query string, request url and user agent
         self::$message = array(
                             'IP'          => getenv( 'REMOTE_ADDR' ),
                             'TIME'        => date( 'M j G:i:s Y' ),
@@ -59,9 +52,8 @@ class Additional
                             'USERAGENT'   => getenv( 'HTTP_USER_AGENT' )
                         );
 
-        // initialize
+        // load monolog and create a log channel
         self::$instance = new Logger('access');
-        // write log
         self::$instance->pushHandler(new StreamHandler(PATH_LOG.'access.log', Logger::INFO));
         self::$instance->addInfo('DATA:', self::$message);
     }

@@ -55,10 +55,16 @@ class Controller
         // load Twig, the template engine and caching
         // @see http://twig.sensiolabs.org
         $twig_loader = new Twig_Loader_Filesystem(PATH_VIEWS);
-        $twig = new Twig_Environment($twig_loader, array(
-            'cache' => PATH_CACHE
-        ));
-
+        // check cache support enable/disable
+        if (CACHE_SUPPORT) {
+            // will cache your page in cache path
+            $twig = new Twig_Environment($twig_loader, array(
+                'cache' => PATH_CACHE
+            ));
+        } else {
+            // if no load twig without caching
+            $twig = new Twig_Environment($twig_loader);
+        }
         // render a view while passing the to-be-rendered data
         echo $twig->render($view . PATH_VIEW_FILE_TYPE, $data_array);
     }
