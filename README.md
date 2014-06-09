@@ -8,6 +8,8 @@
 1. Twig
 2. SASS-compiler in PHP ! The SASS compiling is optional, you can delete the scss folder and just use classic .css, too.
    I've used https://github.com/panique/laravel-sass here.
+3. Monolog for logging access application
+4. Pretty error reporting with Whoops
 
 An extremely simple and easy to understand MVC skeleton application, reduced to the max.
 Everything is **as simple as possible**, as **manually as possible** and as readable as possible.

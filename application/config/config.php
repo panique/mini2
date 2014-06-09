@@ -38,3 +38,19 @@ define('DB_PASS', 'mysql');
  */
 define('PATH_VIEWS', 'application/views/');
 define('PATH_VIEW_FILE_TYPE', '.twig');
+
+/**
+ * Configuration for: Cache
+ *
+ * PATH_CACHE is the path where your cache file are (required if cache enable). You can enable and disable cache mode with true/false in CACHE_SUPPORT.
+ */
+define('CACHE_SUPPORT', false);
+define('PATH_CACHE', 'application/cache/');
+
+/**
+ * Configuration for: Log
+ *
+ * PATH_LOG is the path where your log files are. 
+ * Will be filled by the file containing the report user access to application
+ */
+define('PATH_LOG', 'application/log/');
