@@ -1,4 +1,0 @@
-<Files *.twig>
-    Order Deny,Allow
-    Deny from all
-</Files>
