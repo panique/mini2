@@ -58,9 +58,10 @@ and [How to setup a basic LAMP stack (Linux, Apache, MySQL, PHP) on Ubuntu 12.04
 to 
 ```DocumentRoot /var/www/html/public``` 
 and from
-`<Directory "/var/www/html">` to `<Directory "/var/www/html/public">`. Don't forget to restart.
-
-By the way this is also mentioned in the official Slim documentation, but hidden quite much:
+```<Directory "/var/www/html">``` 
+to 
+```<Directory "/var/www/html/public">```. 
+Don't forget to restart. By the way this is also mentioned in the official Slim documentation, but hidden quite much: 
 http://docs.slimframework.com/#Route-URL-Rewriting
 
 3. Edit the development database configs inside `public/index.php`:
