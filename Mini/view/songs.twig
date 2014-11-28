@@ -1,0 +1,64 @@
+{% extends "_base.twig" %}
+{% block content %}
+<div class="container">
+    <h1>/songs</h1>
+    <div>
+        Everything inside this box comes from view/songs.twig.<br/>
+        Everything outside this box comes from view/_base.twig (which is the surrounding layout template).
+    </div>
+    <!-- add song form -->
+    <div class="box">
+        <h2>Add a song</h2>
+        <form action="/songs/addsong" method="POST">
+            <input type="text" name="artist" value="" placeholder="Artist" required />
+            <input type="text" name="track" value="" placeholder="Track" required />
+            <input type="text" name="link" value="" placeholder="Link" />
+            <input type="submit" name="submit_add_song" value="Add this" />
+        </form>
+    </div>
+    <!-- main content output -->
+    <div class="box">
+        <h2>List of songs ({{ amount_of_songs }} items)</h2>
+        <div>
+            To fill this little demo application with some real data I've simply added (again) some tracks:
+            Favourites of the last months, gems from my vinyl crate, tracks of friends and excellent trash too. :)
+        </div>
+        <div>
+        <table>
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Artist</td>
+                    <td>Track</td>
+                    <td>Link</td>
+                    <td>DELETE</td>
+                    <td>EDIT</td>
+                </tr>
+            </thead>
+            <tbody>
+            {% for song in songs %}
+                <tr>
+                    <td>{{ song.id }}</td>
+                    <td>{{ song.artist }}</td>
+                    <td>{{ song.track }}</td>
+                    <td>
+                        <a href="{{ song.link }}">{{ song.link }}</a>
+                    </td>
+                    <td><a href="/songs/deletesong/{{ song.id }}">delete</a></td>
+                    <td><a href="/songs/editsong/{{ song.id }}">edit</a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        </div>
+    </div>
+    <div class="box">
+        <h3>Ajax demo</h3>
+        <div>
+            Click here to get the amount of songs via Ajax (will be displayed in #javascript-ajax-result-box):
+            <button id="javascript-ajax-button">Get data via AJAX</button>
+            <div id="javascript-ajax-result-box"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}

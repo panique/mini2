@@ -1,0 +1,16 @@
+{% extends "_base.twig" %}
+{% block content %}
+<div class="container">
+    <h1>Edit a song</h1>
+    <!-- add song form -->
+    <div>
+        <form action="/songs/updatesong" method="POST">
+            <input autofocus type="text" name="artist" value="{{ song.artist }}" required />
+            <input type="text" name="track" value="{{ song.track }}" required />
+            <input type="text" name="link" value="{{ song.link }}" />
+            <input type="hidden" name="song_id" value="{{ song.id }}" />
+            <input type="submit" name="submit_update_song" value="Update" />
+        </form>
+    </div>
+</div>
+{% endblock %}
