@@ -54,7 +54,10 @@ and [How to setup a basic LAMP stack (Linux, Apache, MySQL, PHP) on Ubuntu 12.04
  [[Tutorial for Ubuntu 12.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-12-04-lts/)] and ...
  
 2. ... route all requests to /public folder of the script like this: Change the VirtualHost file from
-`DocumentRoot /var/www/html` to `DocumentRoot /var/www/html/public` and from
+```DocumentRoot /var/www/html```
+to 
+```DocumentRoot /var/www/html/public``` 
+and from
 `<Directory "/var/www/html">` to `<Directory "/var/www/html/public">`. Don't forget to restart.
 
 By the way this is also mentioned in the official Slim documentation, but hidden quite much:
