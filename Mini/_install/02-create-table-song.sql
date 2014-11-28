@@ -3,6 +3,9 @@ CREATE TABLE `mini`.`song` (
   `artist` text COLLATE utf8_unicode_ci NOT NULL,
   `track` text COLLATE utf8_unicode_ci NOT NULL,
   `link` text COLLATE utf8_unicode_ci,
+  `year` text COLLATE utf8_unicode_ci,
+  `country` text COLLATE utf8_unicode_ci,
+  `genre` text COLLATE utf8_unicode_ci,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
