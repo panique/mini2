@@ -291,6 +291,9 @@ http://de.slideshare.net/jeremykendall/keeping-it-small-getting-to-know-the-slim
 Injecting stuff into $app:
 http://www.slimframework.com/news/version-230
 
+Slim app
+https://github.com/ccoenraets/wine-cellar-php
+
 ## TODO links useful for futher development (Slim-related)
 
 https://github.com/indieisaconcept/slim-bower-server/blob/master/app/config.php
