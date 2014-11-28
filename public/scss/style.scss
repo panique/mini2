@@ -11,6 +11,10 @@ body {
     font-weight: bold;
     color: $color-font;
     margin: 20px 30px;
+    .number {
+        color: $color-font;
+        opacity: 0.1;
+    }
 }
 
 .navigation {
@@ -64,6 +68,7 @@ body {
         border: 0;
         padding: 5px 10px;
         &[type="submit"] {
+            background-color: #ccc;
             cursor: pointer;
             &:hover {
                 background-color: #222222;
@@ -72,7 +77,7 @@ body {
         }
     }
     button {
-        background-color: #f5f5f5;
+        background-color: #ccc;
         border: 0;
         padding: 5px 10px;
         cursor: pointer;

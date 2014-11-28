@@ -25,6 +25,10 @@ dependencies plus view templates.
 etc.) or switch to another engine (Smarty, Mustache, etc.)
 - uses pure PDO instead of ORM (it's easier to handle)
 
+- basic CRUD functions: create, read, update/edit and delete content
+- basic search
+- basic AJAX demo
+
 - (optionally) shows emulated PDO SQL statement for easy debugging
 - (optionally) compiles SCSS to CSS on the fly
 - (optionally) minifies CSS on the fly

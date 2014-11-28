@@ -166,6 +166,10 @@ $app->post('/songs/search', function () use ($app, $model) {
     ));
 });
 
+$app->get('/songs/search', function () use ($app) {
+    $app->redirect('/songs');
+});
+
 /******************************************* RUN THE APP *******************************************************/
 
 $app->run();
