@@ -121,12 +121,12 @@ inside your HTML-Twig-template you can simply do `{{ song.id }}` which automatic
 `$song->id` etc. Fantastic! See the full [Twig documentation here](http://twig.sensiolabs.org/). 
 
 ```twig
-    {% for song in songs %}
-    <tr>
-        <td>{{ song.id }}</td>
-        <td>{{ song.artist }}</td>
-    </tr>
-    {% endfor %}         
+{% for song in songs %}
+<tr>
+    <td>{{ song.id }}</td>
+    <td>{{ song.artist }}</td>
+</tr>
+{% endfor %}         
 ```
 
 The content of the model (currently in `Mini\model\model.php`) is extremely simple, it's just some methods getting data.
@@ -190,7 +190,7 @@ in production for sure.
     });
 ```
 
-## Why $_POST['x'] instead of Slim's post/get/etc handler ?
+## Why $_POST['x'] instead of Slim's post/get handler ?
 
 Because it's simpler and more native. Feel free to use the Slim handlers if this fits more your workflow.
 
