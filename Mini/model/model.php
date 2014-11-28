@@ -43,7 +43,7 @@ class Model
      */
     public function getAllSongs()
     {
-        $sql = "SELECT id, artist, track, link FROM song";
+        $sql = "SELECT id, artist, track, link, year, country, genre FROM song";
         $query = $this->db->prepare($sql);
         $query->execute();
         // fetchAll() is the PDO method that gets all result rows, here in object-style because we defined this in
@@ -62,12 +62,15 @@ class Model
      * @param string $artist Artist
      * @param string $track Track
      * @param string $link Link
+     * @param string $year Year
+     * @param string $country Country
+     * @param string $genre Genre
      */
-    public function addSong($artist, $track, $link)
+    public function addSong($artist, $track, $link, $year, $country, $genre)
     {
-        $sql = "INSERT INTO song (artist, track, link) VALUES (:artist, :track, :link)";
+        $sql = "INSERT INTO song (artist, track, link, year, country, genre) VALUES (:artist, :track, :link, :year, :country, :genre)";
         $query = $this->db->prepare($sql);
-        $parameters = array(':artist' => $artist, ':track' => $track, ':link' => $link);
+        $parameters = array(':artist' => $artist, ':track' => $track, ':link' => $link, ':year' => $year, ':country' => $country, ':genre' => $genre);
         // useful for debugging: you can see the SQL behind above construction by using:
         // echo '[ PDO DEBUG ]: ' . \PdoDebugger::show($sql, $parameters); exit();
         $query->execute($parameters);
@@ -89,13 +92,14 @@ class Model
         $query->execute($parameters);
     }
 
-
     /**
      * Get a song from database
+     * @param int $song_id Id of song
+     * @return mixed
      */
     public function getSong($song_id)
     {
-        $sql = "SELECT id, artist, track, link FROM song WHERE id = :song_id LIMIT 1";
+        $sql = "SELECT id, artist, track, link, year, country, genre FROM song WHERE id = :song_id LIMIT 1";
         $query = $this->db->prepare($sql);
         $parameters = array(':song_id' => $song_id);
         // useful for debugging: you can see the SQL behind above construction by using:
@@ -111,16 +115,19 @@ class Model
      * automatically. We also don't use strip_tags() etc. here so we keep the input 100% original (so it's possible
      * to save HTML and JS to the database, which is a valid use case). Data will only be cleaned when putting it out
      * in the views (see the views for more info).
+     * @param int $song_id Id
      * @param string $artist Artist
      * @param string $track Track
      * @param string $link Link
-     * @param int $song_id Id
+     * @param string $year Year
+     * @param string $country Country
+     * @param string $genre Genre
      */
-    public function updateSong($artist, $track, $link, $song_id)
+    public function updateSong($song_id, $artist, $track, $link, $year, $country, $genre)
     {
-        $sql = "UPDATE song SET artist = :artist, track = :track, link = :link WHERE id = :song_id";
+        $sql = "UPDATE song SET artist = :artist, track = :track, link = :link, year = :year, country = :country, genre = :genre WHERE id = :song_id";
         $query = $this->db->prepare($sql);
-        $parameters = array(':artist' => $artist, ':track' => $track, ':link' => $link, ':song_id' => $song_id);
+        $parameters = array(':artist' => $artist, ':track' => $track, ':link' => $link, ':year' => $year, ':country' => $country, ':genre' => $genre, ':song_id' => $song_id);
         // useful for debugging: you can see the SQL behind above construction by using:
         // echo '[ PDO DEBUG ]: ' . \PdoDebugger::show($sql, $parameters); exit();
         $query->execute($parameters);

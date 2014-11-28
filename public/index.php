@@ -106,7 +106,7 @@ $app->get('/songs', function () use ($app, $model) {
 $app->post('/songs/addsong', function () use ($app, $model) {
 
     if (isset($_POST["submit_add_song"])) {
-        $model->addSong($_POST["artist"], $_POST["track"], $_POST["link"]);
+        $model->addSong($_POST["artist"], $_POST["track"], $_POST["link"], $_POST["year"], $_POST["country"], $_POST["genre"]);
     }
 
     $app->redirect('/songs');
@@ -141,7 +141,7 @@ $app->get('/songs/editsong/:song_id', function ($song_id) use ($app, $model) {
 $app->post('/songs/updatesong', function () use ($app, $model) {
 
     if (isset($_POST["submit_update_song"])) {
-        $model->updateSong($_POST["artist"], $_POST["track"], $_POST["link"], $_POST['song_id']);
+        $model->updateSong($_POST['song_id'], $_POST["artist"], $_POST["track"], $_POST["link"], $_POST["year"], $_POST["country"], $_POST["genre"]);
     }
 
     $app->redirect('/songs');

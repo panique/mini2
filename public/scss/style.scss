@@ -65,6 +65,10 @@ body {
         padding: 5px 10px;
         &[type="submit"] {
             cursor: pointer;
+            &:hover {
+                background-color: #222222;
+                color: #ffffff;
+            }
         }
     }
     button {
@@ -72,5 +76,9 @@ body {
         border: 0;
         padding: 5px 10px;
         cursor: pointer;
+        &:hover {
+            background-color: #222222;
+            color: #ffffff;
+        }
     }
 }

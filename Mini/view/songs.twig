@@ -13,6 +13,9 @@
             <input type="text" name="artist" value="" placeholder="Artist" required />
             <input type="text" name="track" value="" placeholder="Track" required />
             <input type="text" name="link" value="" placeholder="Link" />
+            <input type="text" name="year" value="" placeholder="Year" />
+            <input type="text" name="country" value="" placeholder="Country" />
+            <input type="text" name="genre" value="" placeholder="Genre" />
             <input type="submit" name="submit_add_song" value="Add this" />
         </form>
     </div>
@@ -31,6 +34,9 @@
                     <td>Artist</td>
                     <td>Track</td>
                     <td>Link</td>
+                    <td>Year</td>
+                    <td>Country</td>
+                    <td>Genre</td>
                     <td>DELETE</td>
                     <td>EDIT</td>
                 </tr>
@@ -44,6 +50,9 @@
                     <td>
                         <a href="{{ song.link }}">{{ song.link }}</a>
                     </td>
+                    <td>{{ song.year }}</td>
+                    <td>{{ song.country }}</td>
+                    <td>{{ song.genre }}</td>
                     <td><a href="/songs/deletesong/{{ song.id }}">delete</a></td>
                     <td><a href="/songs/editsong/{{ song.id }}">edit</a></td>
                 </tr>
