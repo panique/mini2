@@ -1,15 +1,17 @@
 # MINI 2
 
+THIS SCRIPT IS IN DEVELOPMENT ! Expect changes and issues here and there.
+
 ## What is MINI 2 ?
 
 An extremely simple PHP barebone / skeleton application built on top of the wonderful Slim router / micro framework
-[Homepage](slimframework) [GitHub](https://github.com/codeguy/Slim). When working with this, always have a look into
+([Homepage](slimframework), [GitHub](https://github.com/codeguy/Slim)). When working with this, always have a look into
 the excellent [Slim documentation](http://docs.slimframework.com).
 
 MINI is by intention as simple as possible, while still being able to create powerful applications. I've built MINI
 in my free-time, unpaid, voluntarily, just for my personal commercial and private use and uploaded it on GitHub as it
 might be useful for others too. Nothing more. Don't hate, don't complain, don't vandalize, don't bash (this needs to be 
-said these days as people treat tiny free open-source private scripts like they paid masses of money for it). 
+said these days as people treat tiny free open-source private scripts like they paid masses of money for them). 
 If you don't like it, don't use it. If you see issues, please create a ticket. In case you want to contribute, please 
 create a feature-branch, never commit into master. Thanks :)
 
@@ -55,6 +57,7 @@ and [How to setup a basic LAMP stack (Linux, Apache, MySQL, PHP) on Ubuntu 12.04
 ## Installation
 
 ##### 1. Activate mod_rewrite and ...
+
 [Tutorial for Ubuntu 14.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-14-04-lts/) and a
 [Tutorial for Ubuntu 12.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-12-04-lts/).
  
@@ -167,11 +170,11 @@ $app->configureMode('development', function () use ($app) {
 });
 ```
 
-## Environment switch (development / test / production)
+### Environment switch (development / test / production)
 
 TODO
 
-## Before/after hooks
+### Before/after hooks
 
 Slim can perform things at certain points in the lifetime of an application instance, for example *before* everything
 is started. MINI uses this to perform SASS-to-CSS compiling and CSS / JS minification via external tools (loaded via
@@ -194,28 +197,28 @@ in production for sure.
     });
 ```
 
-## Why $_POST['x'] instead of Slim's post/get handler ?
+#### Why $_POST['x'] instead of Slim's post/get handler ?
 
 Because it's simpler and more native. Feel free to use the Slim handlers if this fits more your workflow.
 
-## Why is the deletion of a song not made with a DELETE request ?
+#### Why is the deletion of a song not made with a DELETE request ?
 
 Because (against popular opinion) HTML4/5 does not support other HTTP methods than GET/POST ([but the browsers themselves
 do](http://stackoverflow.com/questions/16805956/why-dont-browsers-support-put-and-delete-reqests-and-when-will-they)).
 The most easy workaround is doing this with GET/POST. Please write a ticket if I'm totally wrong here.
 
-## Glitches
+#### Glitches
 
 1. `/songs/` is not the same as `/songs` !
 2. Writing the initialization in the short syntax like `$app = new \Slim\Slim(array('view' => ...));` has some issues 
 and might eventually break your application. Using the syntax like in index.php works fine.
 @see http://help.slimframework.com/discussions/questions/954-twig-getenvironment-function-no-longer-available-using-slim-views
 
-## Useful: Organize view templates in sub-folders
+#### Useful: Organize view templates in sub-folders
 
 It's possible to organize the view templates for sure, simply do `$app->render('folder1/folder2/index.twig');`.
 
-## Useful: Multiple router files
+#### Useful: Multiple router files
 
 When all the routes in index.php are too much for you: Create a folder `routers`, put your route(r)s into files like 
 `xxx.router.php` and load them like this:
@@ -227,7 +230,7 @@ foreach ($routers as $router) {
 }
 ```
 
-## Useful: Environment switch (develop / test / production)
+#### Useful: Environment switch (develop / test / production)
 
 TODO: im apache definen
 
@@ -256,7 +259,7 @@ $app->configureMode('development', function () use ($app) {
 });
 ```
 
-## Useful: get URL inside view (1)
+#### Useful: get URL inside view (1)
 
 Twig can get the URL, use this in the app
 
@@ -268,7 +271,7 @@ $twig->parserExtensions = array(
 
 and then use `{{ baseUrl() }}` in the view template.
 
-## Useful: get URL inside view (2)
+#### Useful: get URL inside view (2)
 
 Or manually add the `baseUrl`: 
 
@@ -281,7 +284,7 @@ $app->hook('slim.before', function () use ($app) {
 and use it in the view template via `{{ baseUrl }}`. 
 More [here](http://stackoverflow.com/questions/11481210/slim-framework-base-url).
 
-## Scripts used
+#### Scripts used
 
 TODO
 
@@ -291,7 +294,7 @@ https://github.com/panique/php-sass
 CSS / JS Minifier
 http://www.mullie.eu/dont-build-your-own-minifier/
 
-## Interesting
+#### Interesting
 
 http://de.slideshare.net/jeremykendall/keeping-it-small-getting-to-know-the-slim-php-microframework
 
@@ -300,8 +303,6 @@ http://www.slimframework.com/news/version-230
 
 Slim app
 https://github.com/ccoenraets/wine-cellar-php
-
-## TODO links useful for futher development (Slim-related)
 
 https://github.com/indieisaconcept/slim-bower-server/blob/master/app/config.php
 
