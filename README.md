@@ -50,7 +50,7 @@ and [How to setup a basic LAMP stack (Linux, Apache, MySQL, PHP) on Ubuntu 12.04
 
 ## Installation
 
-##### 1. Activate mod_rewrite ...
+##### 1. Activate mod_rewrite and ...
 [Tutorial for Ubuntu 14.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-14-04-lts/) and a
 [Tutorial for Ubuntu 12.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-12-04-lts/).
  
@@ -67,7 +67,7 @@ to
 Don't forget to restart. By the way this is also mentioned in the official Slim documentation, but hidden quite much: 
 http://docs.slimframework.com/#Route-URL-Rewriting
 
-#### 3. Edit the development database configs
+##### 3. Edit the development database configs
 
 Inside `public/index.php` change this:
 
@@ -81,11 +81,11 @@ Inside `public/index.php` change this:
         )
 ```
 
-#### 4. Execute the SQL statements
+##### 4. Execute the SQL statements
  
 In `_install` folder (for example with PHPMyAdmin) to create the demo database.
 
-#### 5. Get dependencies via Composer
+##### 5. Get dependencies via Composer
  
 Do a `composer install` in the project's root folder to fetch the dependencies (and to create the autoloader).
 
