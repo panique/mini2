@@ -46,11 +46,12 @@ etc) is not accessible.
 - mod_rewrite activated, document root routed to /public (tutorial below)
 
 Maybe useful: [How to setup a basic LAMP stack (Linux, Apache, MySQL, PHP) on Ubuntu 14.04 LTS](http://www.dev-metal.com/installsetup-basic-lamp-stack-linux-apache-mysql-php-ubuntu-14-04-lts/)
+and [How to setup a basic LAMP stack (Linux, Apache, MySQL, PHP) on Ubuntu 12.04 LTS](http://www.dev-metal.com/setup-basic-lamp-stack-linux-apache-mysql-php-ubuntu-12-04/).
 
 ## Installation
 
 1. Activate mod_rewrite [[Tutorial for Ubuntu 14.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-14-04-lts/)]
- / [[Tutorial for Ubuntu 12.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-12-04-lts/)] and ...
+ [[Tutorial for Ubuntu 12.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-12-04-lts/)] and ...
  
 2. ... route all requests to /public folder of the script like this: Change the VirtualHost file from
 `DocumentRoot /var/www/html` to `DocumentRoot /var/www/html/public` and from
