@@ -50,10 +50,13 @@ and [How to setup a basic LAMP stack (Linux, Apache, MySQL, PHP) on Ubuntu 12.04
 
 ## Installation
 
-1. Activate mod_rewrite [[Tutorial for Ubuntu 14.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-14-04-lts/)]
- [[Tutorial for Ubuntu 12.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-12-04-lts/)] and ...
+### 1. Activate mod_rewrite 
+[Tutorial for Ubuntu 14.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-14-04-lts/) and a
+[Tutorial for Ubuntu 12.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-12-04-lts/) and ...
  
-2. ... route all requests to /public folder of the script like this: Change the VirtualHost file from
+### 2. ... route all requests to /public folder of the script
+ 
+Change the VirtualHost file from
 ```DocumentRoot /var/www/html```
 to 
 ```DocumentRoot /var/www/html/public``` 
@@ -64,10 +67,13 @@ to
 Don't forget to restart. By the way this is also mentioned in the official Slim documentation, but hidden quite much: 
 http://docs.slimframework.com/#Route-URL-Rewriting
 
-3. Edit the development database configs inside `public/index.php`:
+### 3. Edit the development database configs
+
+Inside `public/index.php` change this:
 
 ```
-        'database' => array(            'db_host' => 'localhost',
+        'database' => array(            
+            'db_host' => 'localhost',
             'db_port' => '',
             'db_name' => 'mini',
             'db_user' => '',
@@ -75,9 +81,13 @@ http://docs.slimframework.com/#Route-URL-Rewriting
         )
 ```
 
-4. Execute the SQL statements in `_install` folder (for example with PHPMyAdmin) to create the demo database.
+### 4. Execute the SQL statements
+ 
+In `_install` folder (for example with PHPMyAdmin) to create the demo database.
 
-5. Do a `composer install` in the project's root folder to fetch the dependencies (and to create the autoloader).
+### 5. Get dependencies via Composer
+ 
+Do a `composer install` in the project's root folder to fetch the dependencies (and to create the autoloader).
 
 ## Basic usage
 
