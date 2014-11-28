@@ -72,13 +72,13 @@ http://docs.slimframework.com/#Route-URL-Rewriting
 Inside `public/index.php` change this:
 
 ```
-        'database' => array(            
-            'db_host' => 'localhost',
-            'db_port' => '',
-            'db_name' => 'mini',
-            'db_user' => '',
-            'db_pass' => ''
-        )
+'database' => array(            
+    'db_host' => 'localhost',
+    'db_port' => '',
+    'db_name' => 'mini',
+    'db_user' => '',
+    'db_pass' => ''
+)
 ```
 
 ##### 4. Execute the SQL statements
@@ -92,7 +92,7 @@ Do a `composer install` in the project's root folder to fetch the dependencies (
 ## Basic usage
 
 See index.php in /public. The code below will basically show /view/subpage.twig when user moves to 
-yourproject.com/subpage !  
+yourproject.com/subpage !
 
 ```php
 $app->get('/subpage', function () use ($app) {
@@ -203,6 +203,9 @@ The most easy workaround is doing this with GET/POST. Please write a ticket if I
 ## Glitches
 
 1. `/songs/` is not the same as `/songs` !
+2. Writing the initialization in the short syntax like `$app = new \Slim\Slim(array('view' => ...));` has some issues 
+and might eventually break your application. Using the syntax like in index.php works fine.
+@see http://help.slimframework.com/discussions/questions/954-twig-getenvironment-function-no-longer-available-using-slim-views
 
 ## Useful: Organize view templates in sub-folders
 
