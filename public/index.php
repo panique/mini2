@@ -156,6 +156,16 @@ $app->get('/songs/ajaxGetStats', function () use ($app, $model) {
     echo json_encode($amount_of_songs);
 });
 
+$app->post('/songs/search', function () use ($app, $model) {
+
+    $result_songs = $model->searchSong($_POST['search_term']);
+
+    $app->render('songs.search.twig', array(
+        'amount_of_results' => count($result_songs),
+        'songs' => $result_songs
+    ));
+});
+
 /******************************************* RUN THE APP *******************************************************/
 
 $app->run();

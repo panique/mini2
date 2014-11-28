@@ -1,23 +1,10 @@
 {% extends "_base.twig" %}
 {% block content %}
 <div class="container">
-    <h1>/songs</h1>
+    <h1>/songs/search</h1>
     <div>
         Everything inside this box comes from view/songs.twig.<br/>
         Everything outside this box comes from view/_base.twig (which is the surrounding layout template).
-    </div>
-    <!-- add song form -->
-    <div class="box">
-        <h2>Add a song</h2>
-        <form action="/songs/addsong" method="POST">
-            <input type="text" name="artist" value="" placeholder="Artist" required />
-            <input type="text" name="track" value="" placeholder="Track" required />
-            <input type="text" name="link" value="" placeholder="Link" />
-            <input type="text" name="year" value="" placeholder="Year" />
-            <input type="text" name="country" value="" placeholder="Country" />
-            <input type="text" name="genre" value="" placeholder="Genre" />
-            <input type="submit" name="submit_add_song" value="Add this" />
-        </form>
     </div>
     <!-- search song form -->
     <div class="box">
@@ -29,11 +16,7 @@
     </div>
     <!-- main content output -->
     <div class="box">
-        <h2>List of songs ({{ amount_of_songs }} items)</h2>
-        <div>
-            To fill this little demo application with some real data I've simply added (again) some tracks:
-            Favourites of the last months, gems from my vinyl crate, tracks of friends and excellent trash too. :)
-        </div>
+        <h2>Results of your search ({{ amount_of_results }} items)</h2>
         <div>
         <table>
             <thead>
@@ -67,14 +50,6 @@
             {% endfor %}
             </tbody>
         </table>
-        </div>
-    </div>
-    <div class="box">
-        <h3>Ajax demo</h3>
-        <div>
-            Click here to get the amount of songs via Ajax (will be displayed in #javascript-ajax-result-box):
-            <button id="javascript-ajax-button">Get data via AJAX</button>
-            <div id="javascript-ajax-result-box"></div>
         </div>
     </div>
 </div>

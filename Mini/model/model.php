@@ -132,4 +132,22 @@ class Model
         // echo '[ PDO DEBUG ]: ' . \PdoDebugger::show($sql, $parameters); exit();
         $query->execute($parameters);
     }
+
+    /**
+     * Search
+     * A super-simple search via LIKE. In a real world scenario you would use MATCH AGAINST and column indexes.
+     * @param $search_term
+     * @return array
+     */
+    public function searchSong($search_term)
+    {
+        $sql = "SELECT id, artist, track, link, year, country, genre FROM song WHERE (artist LIKE :search_term) OR (track LIKE :search_term);";
+        $query = $this->db->prepare($sql);
+        $parameters = array(':search_term' => '%' . $search_term . '%');
+        // useful for debugging: you can see the SQL behind above construction by using:
+        // echo '[ PDO DEBUG ]: ' . \PdoDebugger::show($sql, $parameters); exit();
+        $query->execute($parameters);
+
+        return $query->fetchAll();
+    }
 }
