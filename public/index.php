@@ -45,7 +45,7 @@ $app->configureMode('development', function () use ($app) {
             'db_port' => '',
             'db_name' => 'mini',
             'db_user' => 'root',
-            'db_pass' => ''
+            'db_pass' => 'your_password'
         )
     ));
 });
