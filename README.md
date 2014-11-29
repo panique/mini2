@@ -45,7 +45,7 @@ etc) is not accessible.
 
 Maybe useful: Simple tutorials on setting up a LAMP stack on 
 [Ubuntu 14.04 LTS](http://www.dev-metal.com/installsetup-basic-lamp-stack-linux-apache-mysql-php-ubuntu-14-04-lts/)
-and [Ubuntu 12.04 LTS](http://www.dev-metal.com/setup-basic-lamp-stack-linux-apache-mysql-php-ubuntu-12-04/).
+and [12.04 LTS](http://www.dev-metal.com/setup-basic-lamp-stack-linux-apache-mysql-php-ubuntu-12-04/).
 
 ## Installation (in Vagrant, 100% automatic)
 
@@ -67,7 +67,7 @@ installed in `/var/www/html/myproject`.
 ##### 1. Activate mod_rewrite and ...
 
 Tutorials for [Ubuntu 14.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-14-04-lts/) and 
-[12.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-12-04-lts/).
+[Ubuntu 12.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-12-04-lts/).
  
 ##### 2. ... route all requests to /public folder of the script
  
