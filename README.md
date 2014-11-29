@@ -5,8 +5,7 @@ THIS SCRIPT IS IN DEVELOPMENT ! Expect changes and issues here and there.
 ## What is MINI 2 ?
 
 An extremely simple PHP barebone / skeleton application built on top of the wonderful Slim router / micro framework
-([Homepage](slimframework), [GitHub](https://github.com/codeguy/Slim)). When working with this, always have a look into
-the excellent [Slim documentation](http://docs.slimframework.com).
+[[1](http://www.slimframework.com/)] [[2](https://github.com/codeguy/Slim)] [[docs](http://docs.slimframework.com)].
 
 MINI is by intention as simple as possible, while still being able to create powerful applications. I've built MINI
 in my free-time, unpaid, voluntarily, just for my personal commercial and private use and uploaded it on GitHub as it
@@ -16,6 +15,8 @@ If you don't like it, don't use it. If you see issues, please create a ticket. I
 create a feature-branch, never commit into master. Thanks :)
 
 Mini currently uses Slim 2.4.3.
+
+You can find MINI 1 [here](https://github.com/panique/mini) (totally different code btw).
 
 ## Features
 
