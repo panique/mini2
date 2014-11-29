@@ -67,7 +67,7 @@ installed in `/var/www/html/myproject`.
 ##### 1. Activate mod_rewrite and ...
 
 Tutorials for [Ubuntu 14.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-14-04-lts/) and 
-[Ubuntu 12.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-12-04-lts/).
+[12.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-12-04-lts/).
  
 ##### 2. ... route all requests to /public folder of the script
  
