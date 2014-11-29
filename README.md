@@ -26,24 +26,17 @@ dependencies plus view templates.
 - Built using Slim View package, using Twig as template engine. It's easily possible to use all Twig features (caching 
 etc.) or switch to another engine (Smarty, Mustache, etc.)
 - uses pure PDO instead of ORM (it's easier to handle)
-
 - basic CRUD functions: create, read, update/edit and delete content
 - basic search
 - basic AJAX demo
-
 - (optionally) shows emulated PDO SQL statement for easy debugging
 - (optionally) compiles SCSS to CSS on the fly
 - (optionally) minifies CSS on the fly
 - (optionally) minifies JS on the fly
 - (optional) dev/test/production switch
 
-- by default only allows user access to /public folder. The rest of the application (including .git files, swap files,
+By default MINI allows user access to /public folder. The rest of the application (including .git files, swap files,
 etc) is not accessible.
-
-## TODO
-
-- TODO: full error reporting
-- TODO: look :)
 
 ## Requirements
 
@@ -54,7 +47,7 @@ etc) is not accessible.
 Maybe useful: [How to setup a basic LAMP stack (Linux, Apache, MySQL, PHP) on Ubuntu 14.04 LTS](http://www.dev-metal.com/installsetup-basic-lamp-stack-linux-apache-mysql-php-ubuntu-14-04-lts/)
 and [How to setup a basic LAMP stack (Linux, Apache, MySQL, PHP) on Ubuntu 12.04 LTS](http://www.dev-metal.com/setup-basic-lamp-stack-linux-apache-mysql-php-ubuntu-12-04/).
 
-## Auto-Installation in Vagrant (100% automatic)
+## Installation (in Vagrant, 100% automatic)
 
 If you are using Vagrant for your development, then you can install MINI with one click (or one command on the
 command line). MINI comes with a demo Vagrant-file (defines your Vagrant box) and a demo bootstrap.sh which 
@@ -79,29 +72,35 @@ installed in `/var/www/html/myproject`.
 ##### 2. ... route all requests to /public folder of the script
  
 Change the VirtualHost file from
-```DocumentRoot /var/www/html```
+
+```
+DocumentRoot /var/www/html
+```
+
 to 
-```DocumentRoot /var/www/html/public``` 
+
+```
+DocumentRoot /var/www/html/public
+``` 
+
 and from
-```<Directory "/var/www/html">``` 
+
+```
+<Directory "/var/www/html">
+``` 
+
 to 
-```<Directory "/var/www/html/public">```. 
+
+```
+<Directory "/var/www/html/public">
+```. 
+
 Don't forget to restart. By the way this is also mentioned in the official Slim documentation, but hidden quite much: 
 http://docs.slimframework.com/#Route-URL-Rewriting
 
 ##### 3. Edit the development database configs
 
-Inside `public/index.php` change this:
-
-```
-'database' => array(            
-    'db_host' => 'localhost',
-    'db_port' => '',
-    'db_name' => 'mini',
-    'db_user' => '',
-    'db_pass' => ''
-)
-```
+Inside `public/index.php` edit the database credentials and fill in your values.
 
 ##### 4. Execute the SQL statements
  
@@ -168,7 +167,7 @@ public function getAllSongs()
 
 ## Configuration
 
-Index.php holds the configs for a theoretical development and production environment, like this. Self-explaining.
+Index.php holds the configs for a development environment. Self-explaining.
 
 ```php
 $app->configureMode('development', function () use ($app) {
@@ -187,13 +186,15 @@ $app->configureMode('development', function () use ($app) {
 
 ### Environment switch (development / test / production)
 
-TODO
+To implement a production config simply copy the whole config block above and replace *development* with *production*.
+Add an environment variable to your Apache config. More [here](http://docs.slimframework.com/#Application-Modes) and
+[here](http://kb.mediatemple.net/questions/36/Using+Environment+Variables+in+PHP#gs).
 
 ### Before/after hooks
 
 Slim can perform things at certain points in the lifetime of an application instance, for example *before* everything
 is started. MINI uses this to perform SASS-to-CSS compiling and CSS / JS minification via external tools (loaded via
-Composer btw). This is inside the above development enviroment configuration to make sure these actions are not made
+Composer btw). This is inside the above development environment configuration to make sure these actions are not made
 in production for sure.
 
 ```php
@@ -243,35 +244,6 @@ $routers = glob('../routers/*.router.php');
 foreach ($routers as $router) {
     require $router;
 }
-```
-
-#### Useful: Environment switch (develop / test / production)
-
-TODO: im apache definen
-
-```php
-$app = new \Slim\Slim(array(
-    'debug' => true,
-    'view' => $twigView,
-    'view.path' => '../view/',
-    'mode' => 'development' // <-- define environment
-));
-
-// Only invoked if mode is "production"
-$app->configureMode('production', function () use ($app) {
-    $app->config(array(
-        'log.enable' => true,
-        'debug' => false
-    ));
-});
-
-// Only invoked if mode is "development"
-$app->configureMode('development', function () use ($app) {
-    $app->config(array(
-        'log.enable' => false,
-        'debug' => true
-    ));
-});
 ```
 
 #### Useful: get URL inside view (1)
