@@ -1,6 +1,6 @@
 # MINI 2
 
-THIS SCRIPT IS IN DEVELOPMENT ! Expect changes and issues here and there.
+*This script is in development. Expect changes and issues here and there.*
 
 ## What is MINI 2 ?
 
@@ -14,26 +14,24 @@ said these days as people treat tiny free open-source private scripts like they 
 If you don't like it, don't use it. If you see issues, please create a ticket. In case you want to contribute, please 
 create a feature-branch, never commit into master. Thanks :)
 
-Mini currently uses Slim 2.4.3.
+Mini currently uses [Slim 2.4.3](https://github.com/codeguy/Slim/releases).
 
 You can find MINI 1 [here](https://github.com/panique/mini) (totally different code btw).
 
 ## Features
 
-- Built on Slim
+- built on Slim
 - RESTful routes
-- EXTREMELY SIMPLE. The entire application, while still being MVC-ish, is basically just 2 .php files plus external 
-dependencies plus view templates.
-- Built using Slim View package, using Twig as template engine. It's easily possible to use all Twig features (caching 
-etc.) or switch to another engine (Smarty, Mustache, etc.)
+- extremely simple: the entire application is just 2 .php files (plus external dependencies plus view templates)
+- uses Twig as template engine, others are possible (via Slim packages)
 - uses pure PDO instead of ORM (it's easier to handle)
 - basic CRUD functions: create, read, update/edit and delete content
 - basic search
 - basic AJAX demo
-- (optionally) shows emulated PDO SQL statement for easy debugging
-- (optionally) compiles SCSS to CSS on the fly
-- (optionally) minifies CSS on the fly
-- (optionally) minifies JS on the fly
+- (optional) shows emulated PDO SQL statement for easy debugging
+- (optional) compiles SCSS to CSS on the fly
+- (optional) minifies CSS on the fly
+- (optional) minifies JS on the fly
 - (optional) dev/test/production switch
 
 By default MINI allows user access to /public folder. The rest of the application (including .git files, swap files,
@@ -45,8 +43,9 @@ etc) is not accessible.
 - MySQL
 - mod_rewrite activated, document root routed to /public (tutorial below)
 
-Maybe useful: [How to setup a basic LAMP stack (Linux, Apache, MySQL, PHP) on Ubuntu 14.04 LTS](http://www.dev-metal.com/installsetup-basic-lamp-stack-linux-apache-mysql-php-ubuntu-14-04-lts/)
-and [How to setup a basic LAMP stack (Linux, Apache, MySQL, PHP) on Ubuntu 12.04 LTS](http://www.dev-metal.com/setup-basic-lamp-stack-linux-apache-mysql-php-ubuntu-12-04/).
+Maybe useful: Simple tutorials on setting up a LAMP stack on 
+[Ubuntu 14.04 LTS](http://www.dev-metal.com/installsetup-basic-lamp-stack-linux-apache-mysql-php-ubuntu-14-04-lts/)
+and [Ubuntu 12.04 LTS](http://www.dev-metal.com/setup-basic-lamp-stack-linux-apache-mysql-php-ubuntu-12-04/).
 
 ## Installation (in Vagrant, 100% automatic)
 
@@ -67,37 +66,15 @@ installed in `/var/www/html/myproject`.
 
 ##### 1. Activate mod_rewrite and ...
 
-[Tutorial for Ubuntu 14.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-14-04-lts/) and a
-[Tutorial for Ubuntu 12.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-12-04-lts/).
+Tutorials for [Ubuntu 14.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-14-04-lts/) and 
+[Ubuntu 12.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-12-04-lts/).
  
 ##### 2. ... route all requests to /public folder of the script
  
-Change the VirtualHost file from
-
-```
-DocumentRoot /var/www/html
-```
-
-to 
-
-```
-DocumentRoot /var/www/html/public
-``` 
-
-and from
-
-```
-<Directory "/var/www/html">
-``` 
-
-to 
-
-```
-<Directory "/var/www/html/public">
-```. 
-
-Don't forget to restart. By the way this is also mentioned in the official Slim documentation, but hidden quite much: 
-http://docs.slimframework.com/#Route-URL-Rewriting
+Change the VirtualHost file from `DocumentRoot /var/www/html` to `DocumentRoot /var/www/html/public` and from
+`<Directory "/var/www/html">` to `<Directory "/var/www/html/public">`. Don't forget to restart. By the way this is also 
+mentioned in the official Slim documentation, but 
+[hidden quite much](http://docs.slimframework.com/#Route-URL-Rewriting).
 
 ##### 3. Edit the development database configs
 
