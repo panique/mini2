@@ -180,19 +180,19 @@ Composer btw). This is inside the above development environment configuration to
 in production for sure.
 
 ```php
-    $app->hook('slim.before', function () use ($app) {
+$app->hook('slim.before', function () use ($app) {
 
-        // SASS-to-CSS compiler @see https://github.com/panique/laravel-sass
-        SassCompiler::run("scss/", "css/");
+    // SASS-to-CSS compiler @see https://github.com/panique/laravel-sass
+    SassCompiler::run("scss/", "css/");
 
-        // CSS minifier @see https://github.com/matthiasmullie/minify
-        $minifier = new MatthiasMullie\Minify\CSS('css/style.css');
-        $minifier->minify('css/style.css');
+    // CSS minifier @see https://github.com/matthiasmullie/minify
+    $minifier = new MatthiasMullie\Minify\CSS('css/style.css');
+    $minifier->minify('css/style.css');
 
-        // JS minifier @see https://github.com/matthiasmullie/minify
-        $minifier = new MatthiasMullie\Minify\JS('js/application.js');
-        $minifier->minify('js/application.js');
-    });
+    // JS minifier @see https://github.com/matthiasmullie/minify
+    $minifier = new MatthiasMullie\Minify\JS('js/application.js');
+    $minifier->minify('js/application.js');
+});
 ```
 
 #### Why $_POST['x'] instead of Slim's post/get handler ?
