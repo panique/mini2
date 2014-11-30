@@ -16,7 +16,7 @@ class Model
      * When creating the model, the configs for database connection creation are needed
      * @param $config
      */
-	function __construct($config)
+    function __construct($config)
     {
         // PDO db connection statement preparation
         $dsn = 'mysql:host=' . $config['db_host'] . ';dbname='    . $config['db_name'] . ';port=' . $config['db_port'];
