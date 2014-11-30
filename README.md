@@ -49,7 +49,7 @@ and [12.04 LTS](http://www.dev-metal.com/setup-basic-lamp-stack-linux-apache-mys
 
 ## Screenshot
 
-[![MINI2 - A naked PHP skeleton application on top of Slim](_install/mini-screenshot.png)](http://www.php-mini.com)
+[![MINI2 - A naked PHP skeleton application on top of Slim](Mini/_install/mini-screenshot.png)](http://www.php-mini.com)
 
 ## Installation (in Vagrant, 100% automatic)
 
