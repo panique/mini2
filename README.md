@@ -47,6 +47,10 @@ Maybe useful: Simple tutorials on setting up a LAMP stack on
 [Ubuntu 14.04 LTS](http://www.dev-metal.com/installsetup-basic-lamp-stack-linux-apache-mysql-php-ubuntu-14-04-lts/)
 and [12.04 LTS](http://www.dev-metal.com/setup-basic-lamp-stack-linux-apache-mysql-php-ubuntu-12-04/).
 
+## Screenshot
+
+[![MINI2 - A naked PHP skeleton application on top of Slim](_install/mini-screenshot.png)](http://www.php-mini.com)
+
 ## Installation (in Vagrant, 100% automatic)
 
 If you are using Vagrant for your development, then you can install MINI with one click (or one command on the
