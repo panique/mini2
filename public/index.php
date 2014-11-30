@@ -21,7 +21,7 @@ $app->view->setTemplatesDirectory("../Mini/view");
 // Configs for mode "development" (Slim's default), see the GitHub readme for details on setting the environment
 $app->configureMode('development', function () use ($app) {
 
-    // The pre-application hook: perform stuff before the real action happens @see http://docs.slimframework.com/#Hooks
+    // pre-application hook, performs stuff before real action happens @see http://docs.slimframework.com/#Hooks
     $app->hook('slim.before', function () use ($app) {
 
         // SASS-to-CSS compiler @see https://github.com/panique/php-sass
@@ -105,12 +105,13 @@ $app->group('/songs', function () use ($app, $model) {
         ));
     });
 
-    // POST request on /songs/addsong (after a form submission from /songs). Asks for POST data, performs model-action and
-    // passes POST data to it. Redirects the user afterwards to /songs.
+    // POST request on /songs/addsong (after a form submission from /songs). Asks for POST data, performs
+    // model-action and passes POST data to it. Redirects the user afterwards to /songs.
     $app->post('/addsong', function () use ($app, $model) {
 
         // in a real-world app it would be useful to validate the values (inside the model)
-        $model->addSong($_POST["artist"], $_POST["track"], $_POST["link"], $_POST["year"], $_POST["country"], $_POST["genre"]);
+        $model->addSong(
+            $_POST["artist"], $_POST["track"], $_POST["link"], $_POST["year"], $_POST["country"], $_POST["genre"]);
         $app->redirect('/songs');
     });
 
@@ -122,8 +123,8 @@ $app->group('/songs', function () use ($app, $model) {
         $app->redirect('/songs');
     });
 
-    // GET request on /songs/editsong/:song_id. Should be self-explaining. If song id exists show the editing page, if not
-    // redirect the user. Note the short syntax: 'song' => $model->getSong($song_id)
+    // GET request on /songs/editsong/:song_id. Should be self-explaining. If song id exists show the editing page,
+    // if not redirect the user. Note the short syntax: 'song' => $model->getSong($song_id)
     $app->get('/editsong/:song_id', function ($song_id) use ($app, $model) {
 
         $song = $model->getSong($song_id);
@@ -145,8 +146,8 @@ $app->group('/songs', function () use ($app, $model) {
         $app->redirect('/songs');
     });
 
-    // GET request on /songs/ajaxGetStats. In this demo application this route is used to request data via JavaScript
-    // (AJAX). Note that this does not render a view, it simply echoes out JSON.
+    // GET request on /songs/ajaxGetStats. In this demo application this route is used to request data via
+    // JavaScript (AJAX). Note that this does not render a view, it simply echoes out JSON.
     $app->get('/ajaxGetStats', function () use ($app, $model) {
 
         $amount_of_songs = $model->getAmountOfSongs();
@@ -154,6 +155,7 @@ $app->group('/songs', function () use ($app, $model) {
         echo json_encode($amount_of_songs);
     });
 
+    // POST request on /search. Self-explaining.
     $app->post('/search', function () use ($app, $model) {
 
         $result_songs = $model->searchSong($_POST['search_term']);
@@ -164,6 +166,7 @@ $app->group('/songs', function () use ($app, $model) {
         ));
     });
 
+    // GET request on /search. Simply redirects the user to /songs
     $app->get('/search', function () use ($app) {
         $app->redirect('/songs');
     });
@@ -173,3 +176,4 @@ $app->group('/songs', function () use ($app, $model) {
 /******************************************* RUN THE APP *******************************************************/
 
 $app->run();
+
