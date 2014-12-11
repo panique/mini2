@@ -68,7 +68,7 @@ $app->configureMode('production', function () use ($app) {
 /******************************************** THE MODEL ********************************************************/
 
 // Initialize the model, pass the database configs. $model can now perform all methods from Mini\model\model.php
-$model = new \Mini\Model\Model($app->config('database'));
+$model = new \Mini\model\model($app->config('database'));
 
 /************************************ THE ROUTES / CONTROLLERS *************************************************/
 
