@@ -66,5 +66,8 @@ sudo mysql -h "localhost" -u "root" "-p${PASSWORD}" < "/var/www/html/${PROJECTFO
 # put the password into the application's config. This is quite hardcore, but why not :)
 sed -i "s/your_password/${PASSWORD}/" "/var/www/html/${PROJECTFOLDER}/public/index.php"
 
+# writing rights to css folder
+sudo chmod 0777 -R "/var/www/html/${PROJECTFOLDER}/public/css"
+
 # final feedback
 echo "Voila!"
