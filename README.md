@@ -14,7 +14,7 @@ said these days as people treat tiny free open-source private scripts like they 
 If you don't like it, don't use it. If you see issues, please create a ticket. In case you want to contribute, please 
 create a feature-branch, never commit into master. Thanks :)
 
-Mini currently uses [Slim 2.4.3](https://github.com/codeguy/Slim/releases).
+Mini currently uses [Slim 2.5.0](https://github.com/codeguy/Slim/releases).
 
 You can find MINI 1 [here](https://github.com/panique/mini) (totally different code btw).
 
@@ -300,3 +300,8 @@ https://github.com/indieisaconcept/slim-bower-server/blob/master/app/config.php
 
 Route URL Rewriting / Installation
 http://docs.slimframework.com/#Route-URL-Rewriting
+
+#### Change log
+
+- [panique] upgrade from Slim 2.4.3 to 2.5.0
+- [sim2github] renamed model path to uppercase to fit PSR-4
