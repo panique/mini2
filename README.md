@@ -301,7 +301,7 @@ https://github.com/indieisaconcept/slim-bower-server/blob/master/app/config.php
 Route URL Rewriting / Installation
 http://docs.slimframework.com/#Route-URL-Rewriting
 
-#### Change log
+## Change log
 
 - [panique] upgrade from Slim 2.4.3 to 2.5.0
 - [sim2github] renamed model path to uppercase to fit PSR-4
