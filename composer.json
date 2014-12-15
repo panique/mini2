@@ -4,7 +4,7 @@
     "license":"MIT",
     "require":{
         "php":">=5.3.0",
-        "slim/slim": "~2.4",
+        "slim/slim": "~2.5",
         "slim/views": "~0.1",
         "twig/twig": "~1.16",
         "panique/pdo-debug": "0.2",
