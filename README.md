@@ -1,6 +1,6 @@
-# MINI 2
+[![MINI2 - A naked barebone PHP application](Mini/_install/mini2-logo.png)](http://www.php-mini.com)
 
-*This script is in development. Expect changes and issues here and there.*
+# MINI 2
 
 ## What is MINI 2 ?
 
