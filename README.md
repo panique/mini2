@@ -305,3 +305,8 @@ http://docs.slimframework.com/#Route-URL-Rewriting
 
 - [panique] upgrade from Slim 2.4.3 to 2.5.0
 - [sim2github] renamed model path to uppercase to fit PSR-4
+
+## Support
+
+If you want to support MINI2, then rent your next server at [Host1Plus](https://affiliates.host1plus.com/ref/devmetal/36f4d828.html).
+Thanks! :)
