@@ -18,6 +18,8 @@ Mini currently uses [Slim 2.5.0](https://github.com/codeguy/Slim/releases).
 
 You can find MINI 1 [here](https://github.com/panique/mini) (totally different code btw).
 
+[![Support the project](Mini/_install/banner-host1plus.png)](https://affiliates.host1plus.com/ref/devmetal/36f4d828.html)
+
 ## Features
 
 - built on Slim
@@ -310,3 +312,5 @@ http://docs.slimframework.com/#Route-URL-Rewriting
 
 If you want to support MINI2, then rent your next server at [Host1Plus](https://affiliates.host1plus.com/ref/devmetal/36f4d828.html).
 Thanks! :)
+
+[![Support the project](Mini/_install/banner-host1plus.png)](https://affiliates.host1plus.com/ref/devmetal/36f4d828.html)
