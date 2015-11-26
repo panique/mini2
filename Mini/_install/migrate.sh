@@ -7,6 +7,6 @@ PASSWORD='12345678'
 PROJECTFOLDER='myproject'
 
 
-sudo mysql -h "localhost" -u "root" "-p${PASSWORD}" < "/var/www/html/${PROJECTFOLDER}/Mini/_install/04-insert-demo-data-into-table-song.sql"
+sudo mysql -h "localhost" -u "root" "-p${PASSWORD}" < "/var/www/html/${PROJECTFOLDER}/Mini/_install/05-create-table-onaona.sql"
 
 
