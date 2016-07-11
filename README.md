@@ -49,6 +49,10 @@ Maybe useful: Simple tutorials on setting up a LAMP stack on
 [Ubuntu 14.04 LTS](http://www.dev-metal.com/installsetup-basic-lamp-stack-linux-apache-mysql-php-ubuntu-14-04-lts/)
 and [12.04 LTS](http://www.dev-metal.com/setup-basic-lamp-stack-linux-apache-mysql-php-ubuntu-12-04/).
 
+## License
+
+MIT, so feel free to use the project for everything you like.
+
 ## Screenshot
 
 [![MINI2 - A naked PHP skeleton application on top of Slim](Mini/_install/mini-screenshot.png)](http://www.php-mini.com)
