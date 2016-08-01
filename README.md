@@ -14,7 +14,7 @@ said these days as people treat tiny free open-source private scripts like they 
 If you don't like it, don't use it. If you see issues, please create a ticket. In case you want to contribute, please 
 create a feature-branch, never commit into master. Thanks :)
 
-Mini currently uses [Slim 2.5.0](https://github.com/codeguy/Slim/releases).
+Mini currently uses [Slim 2.6.0](https://github.com/codeguy/Slim/releases).
 
 There's also [MINI 1](https://github.com/panique/mini), an earlier version of MINI2, but with totally different code!
 Since August 2016 there's also [MINI 3](https://github.com/panique/mini3), an improved version of MINI 1. While MINI2
