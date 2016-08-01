@@ -1,4 +1,4 @@
-[![MINI2 - A naked barebone PHP application](Mini/_install/mini2-logo.png)](http://www.php-mini.com)
+![MINI2 - A naked barebone PHP application](Mini/_install/mini2.png)
 
 # MINI 2
 
@@ -16,9 +16,9 @@ create a feature-branch, never commit into master. Thanks :)
 
 Mini currently uses [Slim 2.5.0](https://github.com/codeguy/Slim/releases).
 
-You can find MINI 1 [here](https://github.com/panique/mini) (totally different code btw).
-
-[![Support the project](Mini/_install/banner-host1plus.png)](https://affiliates.host1plus.com/ref/devmetal/36f4d828.html)
+There's also [MINI 1](https://github.com/panique/mini), an earlier version of MINI2, but with totally different code!
+Since August 2016 there's also [MINI 3](https://github.com/panique/mini3), an improved version of MINI 1. While MINI2
+uses Slim under the hood, MINI 1 and 3 are 100% native PHP.
 
 ## Features
 
@@ -55,7 +55,12 @@ MIT, so feel free to use the project for everything you like.
 
 ## Screenshot
 
-[![MINI2 - A naked PHP skeleton application on top of Slim](Mini/_install/mini-screenshot.png)](http://www.php-mini.com)
+![MINI2 - A naked PHP skeleton application on top of Slim](Mini/_install/mini-screenshot.png)
+
+## Support the project
+
+[![Support the project](_install/banner-rackspace.png)](http://tracking.rackspace.com/SH1ES)
+![Support banner tracking pixel](http://tracking.rackspace.com/aff_i?offer_id=2&aff_id=3472)
 
 ## Installation (in Vagrant, 100% automatic)
 
@@ -283,8 +288,6 @@ More [here](http://stackoverflow.com/questions/11481210/slim-framework-base-url)
 
 #### Scripts used
 
-TODO
-
 SASS Compiler
 https://github.com/panique/php-sass
 
@@ -313,9 +316,6 @@ http://docs.slimframework.com/#Route-URL-Rewriting
 - [panique] upgrade from Slim 2.4.3 to 2.5.0
 - [sim2github] renamed model path to uppercase to fit PSR-4
 
-## Support
+## Support the project
 
-If you want to support MINI2, then rent your next server at [Host1Plus](https://affiliates.host1plus.com/ref/devmetal/36f4d828.html).
-Thanks! :)
-
-[![Support the project](Mini/_install/banner-host1plus.png)](https://affiliates.host1plus.com/ref/devmetal/36f4d828.html)
+[![Support the project](_install/banner-rackspace.png)](http://tracking.rackspace.com/SH1ES)
