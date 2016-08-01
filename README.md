@@ -59,7 +59,7 @@ MIT, so feel free to use the project for everything you like.
 
 ## Support the project
 
-[![Support the project](_install/banner-rackspace.png)](http://tracking.rackspace.com/SH1ES)
+[![Support the project](Mini/_install/banner-rackspace.png)](http://tracking.rackspace.com/SH1ES)
 ![Support banner tracking pixel](http://tracking.rackspace.com/aff_i?offer_id=2&aff_id=3472)
 
 ## Installation (in Vagrant, 100% automatic)
@@ -318,4 +318,4 @@ http://docs.slimframework.com/#Route-URL-Rewriting
 
 ## Support the project
 
-[![Support the project](_install/banner-rackspace.png)](http://tracking.rackspace.com/SH1ES)
+[![Support the project](Mini/_install/banner-rackspace.png)](http://tracking.rackspace.com/SH1ES)
