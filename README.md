@@ -72,8 +72,7 @@ settings, downloads the code from GitHub and runs the demo SQL statements (for d
 you'll end up after +/- 5 minutes with a fully running installation of MINI2 inside an Ubuntu 14.04 LTS Vagrant box.
 
 To do so, put `Vagrantfile` and `bootstrap.sh` from `Mini/_vagrant` inside a folder (and nothing else). 
-Do `vagrant box add ubuntu/trusty64` to add Ubuntu 14.04 LTS ("Trusty Thar") 64bit to Vagrant (unless you already have 
-it), then do `vagrant up` to run the box. When installation is finished you can directly use the fully installed demo 
+Then run `vagrant up` to run the box. When installation is finished, you can directly use the fully installed demo 
 app on `192.168.33.77`. As this just a quick demo environment the MySQL root password and the PHPMyAdmin root password 
 are set to `12345678`, the project is installed in `/var/www/html/myproject`.
 
