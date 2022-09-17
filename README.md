@@ -59,8 +59,9 @@ MIT, so feel free to use the project for everything you like.
 
 ## Support the project
 
-[![Support the project](Mini/_install/banner-rackspace.png)](http://tracking.rackspace.com/SH1ES)
-![Support banner tracking pixel](http://tracking.rackspace.com/aff_i?offer_id=2&aff_id=3472)
+Support the project by renting a server at [DigitalOcean](https://www.digitalocean.com/?refcode=40d978532a20) or just tipping a coffee at BuyMeACoffee.com. Thanks! :)
+
+<a href="https://www.buymeacoffee.com/panique" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 ## Installation (in Vagrant, 100% automatic)
 
